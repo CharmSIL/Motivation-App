@@ -33,7 +33,7 @@ export const recipes = [
   {
     recipeId: 122,
     categoryId: 3,
-    title: 'Love Motivation 1',
+    title: 'Life Partner ',
     photo_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSolvXcYRudN2iRY5O-ogzyXBasnt4764ns0w&usqp=CAU',
     photosArray: [
       'https://images.pexels.com/photos/4451923/pexels-photo-4451923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -47,11 +47,11 @@ export const recipes = [
   {
     recipeId: 3,
     categoryId: 4,
-    title: 'Triple Berry Smoothie',
+    title: 'Achive Goals',
     photo_url:
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-a-smoothie-horizontal-1542310071.png?crop=0.803xw:0.923xh;0.116xw,0.00510xh&resize=768:*',
+      'https://www.shinesheets.com/wp-content/uploads/2018/08/things-that-stop-you-from-achieving-your-goals-art-photography.jpg',
     photosArray: [
-      'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-a-smoothie-horizontal-1542310071.png?crop=0.803xw:0.923xh;0.116xw,0.00510xh&resize=768:*',
+      'https://www.shinesheets.com/wp-content/uploads/2018/08/things-that-stop-you-from-achieving-your-goals-art-photography.jpg',
       'https://www.vitamix.com/media/other/images/xVitamix-Triple-Berry-Smoothie-square-crop__1.jpg.pagespeed.ic.OgTC3ILD3R.jpg',
       'http://images.media-allrecipes.com/userphotos/960x960/3798204.jpg',
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrzui8MM6W66I29VZwVvcjpGv99JW3O1owgupc3KwB65rhAyrZ'
@@ -156,10 +156,10 @@ export const recipes = [
   {
     recipeId: 4,
     categoryId: 1,
-    title: 'Perfect Fish Tacos',
-    photo_url: 'https://hips.hearstapps.com/hmg-prod/images/190307-fish-tacos-112-1553283299.jpg',
+    title: 'Competence Motivation three',
+    photo_url: 'https://erincarrpt.com/files/2020/10/healchronicpainblog.jpg',
     photosArray: [
-      'http://d2814mmsvlryp1.cloudfront.net/wp-content/uploads/2014/04/WGC-Fish-Tacos-copy-2.jpg',
+      'https://erincarrpt.com/files/2020/10/healchronicpainblog.jpg',
       'https://thecozyapron.com/wp-content/uploads/2018/03/baja-fish-tacos_thecozyapron_1.jpg',
       'https://www.simplyrecipes.com/wp-content/uploads/2017/06/2017-07-22-FishTacos-6.jpg'
     ],
@@ -652,6 +652,11 @@ export const moods = [
     name: 'Sad',
     photo_url:'https://www.cambridge.org/elt/blog/wp-content/uploads/2019/07/Sad-Face-Emoji.png'
   },
+  {
+    id: 4,
+    name: 'Normal',
+    photo_url:'https://w7.pngwing.com/pngs/64/451/png-transparent-emoji-emoticon-computer-icons-smile-smiley-emoticon-circle-thumbnail.png'
+  },
 
 ];
 
@@ -659,7 +664,7 @@ export const motivations = [
   {
     recipeId: 122,
     moodId: 3,
-    title: 'Love Motivation 1',
+    title: 'Life Partner ',
     photo_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSolvXcYRudN2iRY5O-ogzyXBasnt4764ns0w&usqp=CAU',
     photosArray: [
       'https://images.pexels.com/photos/4451923/pexels-photo-4451923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -673,7 +678,7 @@ export const motivations = [
   {
     recipeId: 3,
     moodId: 4,
-    title: 'Triple Berry Smoothie',
+    title: 'Achive Goals',
     photo_url:
       'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/delish-how-to-make-a-smoothie-horizontal-1542310071.png?crop=0.803xw:0.923xh;0.116xw,0.00510xh&resize=768:*',
     photosArray: [

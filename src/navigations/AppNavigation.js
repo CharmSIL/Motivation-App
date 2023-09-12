@@ -33,15 +33,15 @@ function MainNavigator() {
       <Stack.Screen name='Welcome' component={Welcome}                              options={{ headerTitleAlign: 'center', headerLeft: null,  headerShown: false }}/>
       <Stack.Screen name='Profile' component={Profile}                              options={{ headerTitleAlign: 'center', headerLeft: null }}/>
       <Stack.Screen name='Home' component={HomeScreen}                              options={{ headerTitleAlign: 'center' }}/>
-      <Stack.Screen name='Categories' component={CategoriesScreen}                  options={{ headerTitleAlign: 'center' }}/>
+      <Stack.Screen name='Motivatin Gallery' component={CategoriesScreen}                  options={{ headerTitleAlign: 'center' }}/>
       <Stack.Screen name='Recipe' component={RecipeScreen}                          options={{ headerShown: false }}/>
       <Stack.Screen name='RecipesList' component={RecipesListScreen}/>
       <Stack.Screen name='Ingredient' component={IngredientScreen} />
       <Stack.Screen name='Search' component={SearchScreen} />
       <Stack.Screen name='IngredientsDetails' component={IngredientsDetailsScreen}  options={{ headerShown: false }}/>
       <Stack.Screen name='Test' component={Test}                                    options={{ headerTitleAlign: 'center' }}/>
-      <Stack.Screen name='Motivations' component={Motivations}                      options={{ headerTitleAlign: 'center' }}/>
-      <Stack.Screen name='RandomScreen' component={RandomScreen}                    options={{ headerTitleAlign: 'center' }}/>
+      <Stack.Screen name='My Motivations' component={Motivations}                      options={{ headerTitleAlign: 'center' }}/>
+      <Stack.Screen name='Random Motivation' component={RandomScreen}                    options={{ headerShown: false }}/>
     </Stack.Navigator>
   )
 } 

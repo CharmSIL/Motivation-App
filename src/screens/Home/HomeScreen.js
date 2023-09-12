@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useEffect, useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, TouchableHighlight } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, TouchableHighlight, Image } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 //import styles from "./styles";
 import { categories } from "../../data/dataArrays";
@@ -10,10 +10,10 @@ const HomeScreen = (props) => {
   const { navigation } = props;
   const [userName, setUserName] = useState('');
 
-  const handleNavigateToCategories = () => { navigation.navigate('Categories'); };
-  const handleNavigateToMotivations = () => { navigation.navigate('Motivations'); };
+  const handleNavigateToCategories = () => { navigation.navigate('My Motivations'); };
+  const handleNavigateToMotivations = () => { navigation.navigate('Motivatin Gallery'); };
   const handleNavigateToTest = () => { navigation.navigate('Test'); };
-  const handleNavigateToSample = () => { navigation.navigate('RandomScreen'); };
+  const handleNavigateToSample = () => { navigation.navigate('Random Motivation'); };
 
   useEffect(() => {
     // Load the user's name from AsyncStorage when the component mounts
@@ -62,16 +62,20 @@ const HomeScreen = (props) => {
       <Text style={styles.welcomeText}>Welcome {userName}</Text>
       </View>
       <View style={styles.container}>
-        <TouchableOpacity style={[styles.card, { backgroundColor: '#FF6B6B' }]} onPress={handleNavigateToCategories}>
+        <TouchableOpacity style={[styles.card, { backgroundColor: '#FFB166' }]} onPress={handleNavigateToCategories}>
+        <Image style={styles.photo} source={{uri: "https://cdn.dribbble.com/users/648289/screenshots/6500093/like_button.png?resize=400x0"}} />
           <Text style={styles.cardText}>My Motivations</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.card, { backgroundColor: '#FFB166' }]} onPress={handleNavigateToMotivations}>
-          <Text style={styles.cardText}>My Quotes</Text>
+        <TouchableOpacity style={[styles.card, { backgroundColor: '#FF6B6B' }]} onPress={handleNavigateToMotivations}>
+        <Image style={styles.photo} source={require("../../../assets/motivations/hand.jpg")} />
+          <Text style={styles.cardText}>Motivatin Gallery</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.card, { backgroundColor: '#45B649' }]} onPress={handleNavigateToTest}>
+        <Image style={styles.photo} source={{uri: "https://cdn.pixabay.com/photo/2023/02/15/13/06/mood-7791841_1280.png"}} />
           <Text style={styles.cardText}>Mood Tracker</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.card, { backgroundColor: '#4F95EF' }]} onPress={handleNavigateToSample}>
+        <Image style={styles.photo} source={{uri: "https://ulfire.com.au/wp-content/uploads/2017/01/Motivation-300x300.jpg"}} />
           <Text style={styles.cardText}>Random Motivations</Text>
         </TouchableOpacity>
         {/* <View style={[styles.card, { backgroundColor: 'rgba(0, 0, 255, 0.5)' }]}>
@@ -105,17 +109,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#F0F0F0', // Background color for the entire screen
   },
   welcomeRow: {
-    alignItems: 'center',
-    marginTop:10,
+    //alignItems: 'center',
+    marginLeft:20,
+    marginTop:20,
     marginBottom: 10,
   },
   welcomeText: {
     fontSize: 24,
     fontWeight: 'bold',
-    textAlign: 'center',
+    //textAlign: 'center',
     marginTop: 5,
     marginBottom: 0,
-    color: '#333', // Text color
+    color: '#333', 
+    textTransform: 'uppercase',
   },
   card: {
     width: '48%',
@@ -134,6 +140,15 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#fff', // Text color for cards
+  },
+  photo: {
+    width: '60%',
+    height:'40%',    
+    height: undefined,
+    aspectRatio: 1,
+    marginTop:5,
+    marginBottom: 5,
+    borderRadius: 10,
   },
 });
 
