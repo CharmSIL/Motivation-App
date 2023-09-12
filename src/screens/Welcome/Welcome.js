@@ -8,8 +8,8 @@ const WelcomeScreen = (props) => {
   // Render the WelcomeScreen content if loading is complete
   return (
     <View style={styles.container}>
-      <Text style={styles.title}> MOTIVATION </Text>
-      <Image source={require("../../../assets/icon.png")} style={styles.image}/>
+      <Text style={styles.title}> Life Changer </Text>
+      <Image source={require("../../../assets/tree-icon.png")} style={styles.image}/>
 
       <TouchableOpacity style={styles.startButton} onPress={() => navigation.navigate("Profile")}>
         <Text style={styles.buttonText}>Get Start</Text>
@@ -26,14 +26,15 @@ const styles = StyleSheet.create({
       backgroundColor: '#F5F5F5', // Background color
     },
     title: {
-      fontSize: 30,
+      fontSize: 40,
       fontWeight: 'bold',
       marginBottom: 20,
       color: '#333', // Text color
+      textTransform: 'uppercase',
     },
     image: {
-      width: '60%',
-      height: '40%',
+      width: '100%',
+      height: '50%',
       resizeMode: 'contain',
       marginBottom: 30,
     },

@@ -31,7 +31,7 @@ function MainNavigator() {
       }}
     >
       <Stack.Screen name='Welcome' component={Welcome}                              options={{ headerTitleAlign: 'center', headerLeft: null,  headerShown: false }}/>
-      <Stack.Screen name='Profile' component={Profile}                              options={{ headerTitleAlign: 'center', headerLeft: null }}/>
+      <Stack.Screen name='Profile' component={Profile}                              options={{ headerShown: false }}/>
       <Stack.Screen name='Home' component={HomeScreen}                              options={{ headerTitleAlign: 'center' }}/>
       <Stack.Screen name='Motivatin Gallery' component={CategoriesScreen}                  options={{ headerTitleAlign: 'center' }}/>
       <Stack.Screen name='Recipe' component={RecipeScreen}                          options={{ headerShown: false }}/>

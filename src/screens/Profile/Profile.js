@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { Card } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const ProfileScreen = ({ navigation }) => {
@@ -19,6 +20,12 @@ const ProfileScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.card}>
+      <Image source={require("../../../assets/tree-icon.png")} style={styles.image}/>
+       <Text style={styles.intro}>Life Changer" is your ultimate motivation companion, 
+       designed to help you unleash your full potential and transform your life. 
+       </Text>
+       </View>
       <Text style={styles.title}>Enter Your Name</Text>
       <TextInput
         style={styles.input}
@@ -40,11 +47,33 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5F5F5',
   },
+  card: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop:10,
+    marginBottom: 10,
+    marginLeft:20,
+    marginRight:20,
+    borderColor:'green',
+    borderWidth:2,
+    borderRadius:20,
+  },
   title: {
-    fontSize: 30,
+    fontSize: 22,
     fontWeight: 'bold',
+    marginTop:10,
     marginBottom: 20,
     color: '#333',
+  },
+  intro: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#333',
+    marginTop:-20,
+    marginLeft:10,
+    marginRight:10,
+    textAlign: 'center',
+    marginBottom: 20,
   },
   input: {
     width: '80%',
@@ -75,6 +104,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+  image: {
+    width: 190,
+    height: 190,
+    resizeMode: 'contain',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
 });
 
