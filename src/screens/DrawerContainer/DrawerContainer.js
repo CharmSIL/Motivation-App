@@ -34,10 +34,10 @@ export default function DrawerContainer(props) {
           }}
         />
         <MenuButton
-          title="TEST"
+          title="MOTIVATIONS"
           source={require("../../../assets/icons/info.png")}
           onPress={() => {
-            navigation.navigate("Test");
+            navigation.navigate("Motivations");
             navigation.closeDrawer();
           }}
         />

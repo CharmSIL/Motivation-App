@@ -13,6 +13,7 @@ import SearchScreen from '../screens/Search/SearchScreen';
 import IngredientsDetailsScreen from '../screens/IngredientsDetails/IngredientsDetailsScreen';
 import Profile from '../screens/Profile/Profile';
 import Test from '../screens/Test/Test';
+import Motivations from '../screens/Motivations/Motivations';
 
  const Stack = createStackNavigator();
 
@@ -38,6 +39,7 @@ function MainNavigator() {
       <Stack.Screen name='Search' component={SearchScreen} />
       <Stack.Screen name='IngredientsDetails' component={IngredientsDetailsScreen} options={{ headerShown: false }}/>
       <Stack.Screen name='Test' component={Test} />
+      <Stack.Screen name='Motivations' component={Motivations} />
     </Stack.Navigator>
   )
 } 

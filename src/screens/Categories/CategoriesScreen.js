@@ -28,8 +28,8 @@ export default function HomeScreen(props) {
   const renderRecipes = ({ item }) => (
     <TouchableHighlight underlayColor="rgba(73,182,77,0.9)" onPress={() => onPressRecipe(item)}>
       <View style={styles.container}>
-        <Text style={styles.title}>{item.title}</Text>
         <Image style={styles.photo} source={{ uri: item.photo_url }} />
+        <Text style={styles.title}>{item.title}</Text>
         <Text style={styles.category}>{getCategoryName(item.categoryId)}</Text>
       </View>
     </TouchableHighlight>

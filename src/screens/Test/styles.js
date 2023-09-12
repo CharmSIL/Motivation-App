@@ -1,54 +1,50 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  categoriesItemContainer: {
+  container: {
     flex: 1,
-    marginLeft: 100,
-    marginRight: 100,
-    marginTop:10,
-    marginBottom:10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 135,
-    borderColor: '#cccccc',
-    borderWidth: 2,
-    borderRadius: 20,
-  },
-  categoriesPhoto: {
-    width: '48%',
-    height: '70%',
-    marginTop:10,
-    //marginBottom:5,
-    borderRadius: 20,
-    borderBottomLeftRadius: 0,
-    borderBottomRightRadius: 0,
-    shadowColor: 'blue',
-    shadowOffset: {
-      width: 0,
-      height: 3
-    },
-    shadowRadius: 5,
-    shadowOpacity: 1.0,
-    //elevation: 3,
-  },
-  categoriesName: {
-    flex: 1,
-    fontSize: 20,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: '#333333',
-  },
-  categoriesInfo: {
-    //marginTop: 3,
-    marginBottom: 10
+    backgroundColor: "#fff",
   },
   welcomeText: {
     fontSize: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
+    fontWeight: "bold",
+    textAlign: "center",
     marginTop: 20,
-    marginBottom: 10,
-    color: '#333', // Text color
+  },
+  categoriesItemContainer: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+    margin: 10,
+    padding: 10,
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  categoriesPhoto: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+  },
+  categoriesName: {
+    marginTop: 10,
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  categoriesRow: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    paddingHorizontal: 10,
+  },
+  listContainer: {
+    paddingVertical: 10,
+  },
+  emptyView: {
+    flex: 1,
   },
 });
 
