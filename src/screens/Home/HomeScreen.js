@@ -53,6 +53,9 @@ const HomeScreen = (props) => {
   );
   return (
     <ScrollView contentContainerStyle={styles.scrollViewContent}>
+      <View style={styles.welcomeRow}>
+      <Text style={styles.welcomeText}>Welcome {userName}</Text>
+      </View>
       <View style={styles.container}>
         <View style={[styles.card, { backgroundColor: '#FF6B6B' }]}>
           <Text style={styles.cardText}>My Motivations</Text>
@@ -95,6 +98,19 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 16,
     backgroundColor: '#F0F0F0', // Background color for the entire screen
+  },
+  welcomeRow: {
+    alignItems: 'center',
+    marginTop:10,
+    marginBottom: 10,
+  },
+  welcomeText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 5,
+    marginBottom: 0,
+    color: '#333', // Text color
   },
   card: {
     width: '48%',
