@@ -13,7 +13,7 @@ const HomeScreen = (props) => {
   const handleNavigateToCategories = () => { navigation.navigate('Categories'); };
   const handleNavigateToMotivations = () => { navigation.navigate('Motivations'); };
   const handleNavigateToTest = () => { navigation.navigate('Test'); };
-  const handleNavigateToSample = () => { navigation.navigate('Test'); };
+  const handleNavigateToSample = () => { navigation.navigate('RandomScreen'); };
 
   useEffect(() => {
     // Load the user's name from AsyncStorage when the component mounts

@@ -14,6 +14,7 @@ import IngredientsDetailsScreen from '../screens/IngredientsDetails/IngredientsD
 import Profile from '../screens/Profile/Profile';
 import Test from '../screens/Test/Test';
 import Motivations from '../screens/Motivations/Motivations';
+import RandomScreen from '../screens/Random/RandomMotivation';
 
  const Stack = createStackNavigator();
 
@@ -29,7 +30,7 @@ function MainNavigator() {
           }
       }}
     >
-      <Stack.Screen name='Welcome' component={Welcome}                              options={{ headerTitleAlign: 'center', headerLeft: null }}/>
+      <Stack.Screen name='Welcome' component={Welcome}                              options={{ headerTitleAlign: 'center', headerLeft: null,  headerShown: false }}/>
       <Stack.Screen name='Profile' component={Profile}                              options={{ headerTitleAlign: 'center', headerLeft: null }}/>
       <Stack.Screen name='Home' component={HomeScreen}                              options={{ headerTitleAlign: 'center' }}/>
       <Stack.Screen name='Categories' component={CategoriesScreen}                  options={{ headerTitleAlign: 'center' }}/>
@@ -40,6 +41,7 @@ function MainNavigator() {
       <Stack.Screen name='IngredientsDetails' component={IngredientsDetailsScreen}  options={{ headerShown: false }}/>
       <Stack.Screen name='Test' component={Test}                                    options={{ headerTitleAlign: 'center' }}/>
       <Stack.Screen name='Motivations' component={Motivations}                      options={{ headerTitleAlign: 'center' }}/>
+      <Stack.Screen name='RandomScreen' component={RandomScreen}                    options={{ headerTitleAlign: 'center' }}/>
     </Stack.Navigator>
   )
 } 
