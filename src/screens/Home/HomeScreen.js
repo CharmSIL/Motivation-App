@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useEffect, useState } from "react";
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, TouchableHighlight } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 //import styles from "./styles";
 import { categories } from "../../data/dataArrays";
@@ -9,6 +9,11 @@ import MenuImage from "../../components/MenuImage/MenuImage";
 const HomeScreen = (props) => {
   const { navigation } = props;
   const [userName, setUserName] = useState('');
+
+  const handleNavigateToCategories = () => { navigation.navigate('Categories'); };
+  const handleNavigateToMotivations = () => { navigation.navigate('Motivations'); };
+  const handleNavigateToTest = () => { navigation.navigate('Test'); };
+  const handleNavigateToSample = () => { navigation.navigate('Test'); };
 
   useEffect(() => {
     // Load the user's name from AsyncStorage when the component mounts
@@ -57,18 +62,18 @@ const HomeScreen = (props) => {
       <Text style={styles.welcomeText}>Welcome {userName}</Text>
       </View>
       <View style={styles.container}>
-        <View style={[styles.card, { backgroundColor: '#FF6B6B' }]}>
+        <TouchableOpacity style={[styles.card, { backgroundColor: '#FF6B6B' }]} onPress={handleNavigateToCategories}>
           <Text style={styles.cardText}>My Motivations</Text>
-        </View>
-        <View style={[styles.card, { backgroundColor: '#FFB166' }]}>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.card, { backgroundColor: '#FFB166' }]} onPress={handleNavigateToMotivations}>
           <Text style={styles.cardText}>My Quotes</Text>
-        </View>
-        <View style={[styles.card, { backgroundColor: '#45B649' }]}>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.card, { backgroundColor: '#45B649' }]} onPress={handleNavigateToTest}>
           <Text style={styles.cardText}>Mood Tracker</Text>
-        </View>
-        <View style={[styles.card, { backgroundColor: '#4F95EF' }]}>
+        </TouchableOpacity>
+        <TouchableOpacity style={[styles.card, { backgroundColor: '#4F95EF' }]} onPress={handleNavigateToSample}>
           <Text style={styles.cardText}>Random Motivations</Text>
-        </View>
+        </TouchableOpacity>
         {/* <View style={[styles.card, { backgroundColor: 'rgba(0, 0, 255, 0.5)' }]}>
           <Text style={styles.cardText}>Custom Card 1</Text>
         </View>
